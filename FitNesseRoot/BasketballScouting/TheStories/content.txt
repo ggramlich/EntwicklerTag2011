@@ -1,0 +1,182 @@
+!define BB_EXPERT {'''Bruno'''}
+!define PROGRAMMER {'''Paulo'''}
+
+${BB_EXPERT}
+Ich brauche eine Anwendung, mit der ich eine Auswertung eines Basketball Spiels heruntergebrochen auf einzelne Spieler vornehmen kann.
+
+Dazu gehören Punkte, Rebounds, Assists, Steals, Turnovers, Fouls.
+
+${PROGRAMMER}
+Das hört sich nicht so schwierig an, das sind ja alles Integers. Wir sollten uns erstmal über die Logik unterhalten und dann recht bald zu einem Durchstich kommen.
+
+${BB_EXPERT}
+Wie bitte?
+
+${PROGRAMMER}
+Ich meinte, dass die Werte, die Du genannt hast ja alles genze Zahlen sind. Ich würde gerne erst mal ein paar Beispiele sehen, wie Du Dir Daten vorstellst und dann können wir die Oberfläche dazu bauen.
+
+${BB_EXPERT}
+OK. Ich will die Daten in Echtzeit während des Spiels erfassen können. Vor dem Spiel werde ich die Mannschaftsaufstellung beider Mannschaften eintragen, damit ich mich nachher darauf beziehen kann.
+
+${PROGRAMMER}
+Dann lass uns doch damit anfangen. Ich vermute eine Mannschaftsaufstellung sieht so aus:
+
+-|comment|
+|Mannschaftsaufstellung|Dallas Mavericks|
+|Nachname              |Vorname         |
+|Butler                |Caron           |
+|Jones                 |Dominique       |
+|Kidd                  |Jason           |
+|Marion                |Shawn           |
+|Nowitzki              |Dirk            |
+|Stojakovic            |Peja            |
+
+${BB_EXPERT}
+So in etwa, aber da muss noch die Trikotnummer dazu. Also so in etwa:
+
+-!|comment|
+|Mannschaftsaufstellung|Dallas Mavericks    |
+|Trikot                |Nachname  |Vorname  |
+|4                     |Butler    |Caron    |
+|20                    |Jones     |Dominique|
+|2                     |Kidd      |Jason    |
+|0                     |Marion    |Shawn    |
+|41                    |Nowitzki  |Dirk     |
+|16                    |Stojakovic|Peja     |
+
+Über die Trikotnummer würde ich dann sowieso den Spieler auswählen, wenn ich zum Beispiel einen Korb für ihn eintragen will, weil ich die Nummer sehe, wenn er auf dem Feld steht.
+
+${PROGRAMMER}
+Verstehe - dann kann ich die Trikotnummer wohl als Integer Schlüssel innerhalb der Mannschaft verwenden. Vielleicht mache ich aus der Mannschaftsaufstellung einfach eine !-HashMap-! von Spielern.
+
+${BB_EXPERT}
+Was?
+
+${PROGRAMMER}
+Entschuldige, ich habe schon ein bisschen über die Speicherung der Daten nachgedacht.
+Die Trikotnummer ist also eine ganze Zahl und innerhalb der Mannschaft gibt es keine zwei Leute, die die gleiche Nummer haben.
+
+${BB_EXPERT}
+Das hört sich richtig an...
+Es kann aber auch Spieler mit der Trikotnummer 00 geben, die müssen von Spielern mit Nummer 0 unterschieden werden.
+
+${PROGRAMMER}
+OK, das kriege ich hin. Gut, dass Dir das jetzt schon eingefallen ist.
+
+Also beschränken wir unser Beispiel mal auf das Wesentliche:
+
+-!|comment|
+|Mannschaftsaufstellung|Mannschaft XYZ  |
+|Trikot                |Nachname|Vorname|
+|11                    |Barea   |Jose   |
+|0                     |Marion  |Shawn  |
+|00                    |Montross|Eric   |
+
+und ich will den Spieler rausbekommen:
+-!|comment|
+|Spieler von|Mannschaft XYZ|mit Trikot|11|ist|Jose Barea   |
+|Spieler von|Mannschaft XYZ|mit Trikot|0 |ist|Shawn Marion |
+|Spieler von|Mannschaft XYZ|mit Trikot|00|ist|Eric Montross|
+
+
+${BB_EXPERT}
+Wenn ich das so sehe, dann wird mir klar, dass die Namen eigentlich nur Zusatz Informationen sind und ich vielleicht vor dem Spiel gar nicht die Zeit habe, sie einzutragen.
+Ich möchte den Spieler beim Spiel sowieso nur über die Trikotnummer auswählen.
+
+${PROGRAMMER}
+Dann machen wir die Namen also optional. Ist es denn sinnvoll, die Mannschaft über ihren Mannschaftsnamen zu identifizieren?
+
+${BB_EXPERT}
+Das ist auch ganz schön umständlich. An jedem Spiel nehmen aber immer "Mannschaft A" und "Mannschaft B" teil. Hilfreich wäre da noch die Trikotfarbe, aber die ist auch nicht Pflicht.
+
+Vielleicht einfach so:
+
+-!|comment|
+|Mannschaft|A|in|rot|
+|Trikot             |
+|1                  |
+|0                  |
+|00                 |
+|23                 |
+|42                 |
+
+${PROGRAMMER}
+Sieht gut aus. Ich weiß noch nicht so recht, wie ich die optionalen Daten dazu hänge, aber lass uns mal über die Geschichte mit der Eingabe von Toren usw. reden.
+Du sprachst dabei von Echtzeit, welche Response Zeiten stellst Du Dir denn vor?
+
+${BB_EXPERT}
+Nicht Tore - Körbe. Ich will halt während des Spiels etwas eingeben und nicht irgendwie nachträglich. Was meinst Du mit Response Zeiten?
+
+${PROGRAMMER}
+Sorry - wir sind ja beim Basketball. Vergiss das mit den Response Zeiten. Ich verstehe unter Echtzeit etwas Anderes.
+Wenn ich mich richtig erinnere, dann gibt jeder Korb ja zwei Punkte.
+
+${BB_EXPERT}
+Ja das sind die Feldkörbe. Es gibt auch noch Freiwürfe, die nur einen Punkt geben und Dreier, die eben drei Punkte geben.
+
+${PROGRAMMER}
+Das sollten wir gleich mal aufschreiben.
+
+![
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb trifft
+dann hat er 2 Punkte
+]!
+
+![
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Dreier trifft
+dann hat er 3 Punkte
+]!
+
+![
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Freiwurf trifft
+dann hat er 1 Punkt
+]!
+
+${BB_EXPERT}
+Das stimmt alles. Ich würde gerne immer den aktuellen Spielstand sehen. Können wir das aufnehmen.
+
+${PROGRAMMER}
+Das ist dann also die Summe der Punkte der Spieler pro Mannschaft. Da baue ich eine Methode auf der Mannschaft, in der ich über ihre Spieler iteriere...
+Lass uns mal ein Beispiel machen.
+
+Zuerst geben wir die Spieler an.
+
+-!|comment|
+|Mannschaft|A|
+|Trikot|
+|0|
+|00|
+|1|
+
+-!|comment|
+|Mannschaft|B|
+|Trikot|
+|1|
+|2|
+|3|
+
+${BB_EXPERT}
+
+OK, lass mich mal:
+
+![
+Der Spielstand ist 0:0
+Spieler B1 trifft einen Feldkorb
+Es steht 0:2
+Spieler A00 trifft einen Freiwurf
+Es steht 1:2
+Spieler A1 trifft einen Dreier
+Es steht 4:2
+Spieler B3 trifft einen Freiwurf
+Es steht 4:3
+
+
+
+...
+
+
+
+!contents -R2 -g -p -f -h
