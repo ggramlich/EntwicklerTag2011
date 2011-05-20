@@ -1,22 +1,30 @@
 !define BB_EXPERT {'''Bruno'''}
-!define PROGRAMMER {'''Paulo'''}
+!define PROGRAMMER {'''Paula'''}
+
+${BB_EXPERT} der Basketballexperte und ${PROGRAMMER} die Programmiererin treffen sich, weil ${BB_EXPERT} eine neues Programm braucht.
 
 ${BB_EXPERT}
-Ich brauche eine Anwendung, mit der ich eine Auswertung eines Basketball Spiels heruntergebrochen auf einzelne Spieler vornehmen kann.
+Ich brauche eine Anwendung, mit der ich eine Auswertung eines Basketball Spiels für einzelne Spieler vornehmen kann.
 
 Dazu gehören Punkte, Rebounds, Assists, Steals, Turnovers, Fouls.
 
 ${PROGRAMMER}
-Das hört sich nicht so schwierig an, das sind ja alles Integers. Wir sollten uns erstmal über die Logik unterhalten und dann recht bald zu einem Durchstich kommen.
+Ich weiß zwar nicht, was diese Rebounds, Assists und sonst was sind, aber das hört sich nicht so schwierig an. Das sind vermutlich alles Integers. Wir sollten uns erstmal über die Logik unterhalten und dann recht bald zu einem Durchstich kommen.
 
 ${BB_EXPERT}
 Wie bitte?
 
 ${PROGRAMMER}
-Ich meinte, dass die Werte, die Du genannt hast ja alles genze Zahlen sind. Ich würde gerne erst mal ein paar Beispiele sehen, wie Du Dir Daten vorstellst und dann können wir die Oberfläche dazu bauen.
+Ich meinte, dass die Werte, die Du genannt hast ja alles ganze Zahlen sind. Ich würde gerne erst mal ein paar Beispiele sehen, wie Du Dir Daten vorstellst und dann können wir die Oberfläche dazu bauen.
 
 ${BB_EXPERT}
-OK. Ich will die Daten in Echtzeit während des Spiels erfassen können. Vor dem Spiel werde ich die Mannschaftsaufstellung beider Mannschaften eintragen, damit ich mich nachher darauf beziehen kann.
+Was für Daten meinst Du denn?
+
+${PROGRAMMER}
+Naja, Du hast doch von diesen Punkten, Assistenten und was auch immer gesprochen.
+
+${BB_EXPERT}
+OK. Ich will die Daten live erfassen können. Vor dem Spiel werde ich die Mannschaftsaufstellungen eintragen, damit ich mich nachher darauf beziehen kann.
 
 ${PROGRAMMER}
 Dann lass uns doch damit anfangen. Ich vermute eine Mannschaftsaufstellung sieht so aus:
@@ -32,7 +40,7 @@ Dann lass uns doch damit anfangen. Ich vermute eine Mannschaftsaufstellung sieht
 |Stojakovic            |Peja            |
 
 ${BB_EXPERT}
-So in etwa, aber da muss noch die Trikotnummer dazu. Also so in etwa:
+Ja, aber da muss noch die Trikotnummer dazu. Also so in etwa:
 
 -!|comment|
 |Mannschaftsaufstellung|Dallas Mavericks    |
@@ -47,7 +55,13 @@ So in etwa, aber da muss noch die Trikotnummer dazu. Also so in etwa:
 Über die Trikotnummer würde ich dann sowieso den Spieler auswählen, wenn ich zum Beispiel einen Korb für ihn eintragen will, weil ich die Nummer sehe, wenn er auf dem Feld steht.
 
 ${PROGRAMMER}
-Verstehe - dann kann ich die Trikotnummer wohl als Integer Schlüssel innerhalb der Mannschaft verwenden. Vielleicht mache ich aus der Mannschaftsaufstellung einfach eine !-HashMap-! von Spielern.
+Gut, wie groß ist denn die größte Trikotnummer?
+
+${BB_EXPERT}
+Die höchste Nummer ist 99.
+
+${PROGRAMMER}
+Verstehe - dann kann ich die Trikotnummer als Integer Schlüssel innerhalb der Mannschaft verwenden. Vielleicht mache ich aus der Mannschaftsaufstellung einfach eine !-HashMap-! von Spielern.
 
 ${BB_EXPERT}
 Was?
@@ -57,12 +71,9 @@ Entschuldige, ich habe schon ein bisschen über die Speicherung der Daten nachge
 Die Trikotnummer ist also eine ganze Zahl und innerhalb der Mannschaft gibt es keine zwei Leute, die die gleiche Nummer haben.
 
 ${BB_EXPERT}
-Das hört sich richtig an...
-Es kann aber auch Spieler mit der Trikotnummer 00 geben, die müssen von Spielern mit Nummer 0 unterschieden werden.
+Ja klar, so muss das sein.
 
 ${PROGRAMMER}
-OK, das kriege ich hin. Gut, dass Dir das jetzt schon eingefallen ist.
-
 Also beschränken wir unser Beispiel mal auf das Wesentliche:
 
 -!|comment|
@@ -70,13 +81,13 @@ Also beschränken wir unser Beispiel mal auf das Wesentliche:
 |Trikot                |Nachname|Vorname|
 |11                    |Barea   |Jose   |
 |0                     |Marion  |Shawn  |
-|00                    |Montross|Eric   |
+|2                     |Kidd    |Jason  |
 
 und ich will den Spieler rausbekommen:
 -!|comment|
-|Spieler von|Mannschaft XYZ|mit Trikot|11|ist|Jose Barea   |
-|Spieler von|Mannschaft XYZ|mit Trikot|0 |ist|Shawn Marion |
-|Spieler von|Mannschaft XYZ|mit Trikot|00|ist|Eric Montross|
+|Spieler von|Mannschaft XYZ|mit Trikot|11|ist|Jose Barea  |
+|Spieler von|Mannschaft XYZ|mit Trikot|0 |ist|Shawn Marion|
+|Spieler von|Mannschaft XYZ|mit Trikot|2 |ist|Jason Kidd  |
 
 
 ${BB_EXPERT}
@@ -87,28 +98,38 @@ ${PROGRAMMER}
 Dann machen wir die Namen also optional. Ist es denn sinnvoll, die Mannschaft über ihren Mannschaftsnamen zu identifizieren?
 
 ${BB_EXPERT}
-Das ist auch ganz schön umständlich. An jedem Spiel nehmen aber immer "Mannschaft A" und "Mannschaft B" teil. Hilfreich wäre da noch die Trikotfarbe, aber die ist auch nicht Pflicht.
+Das ist auch ganz schön umständlich. An jedem Spiel nehmen ja zwei Mannschaften teil.
 
 Vielleicht einfach so:
 
 -!|comment|
-|Mannschaft|A|in|rot|
+|Mannschaft|A|
 |Trikot             |
 |1                  |
 |0                  |
-|00                 |
 |23                 |
 |42                 |
 
 ${PROGRAMMER}
-Sieht gut aus. Ich weiß noch nicht so recht, wie ich die optionalen Daten dazu hänge, aber lass uns mal über die Geschichte mit der Eingabe von Toren usw. reden.
-Du sprachst dabei von Echtzeit, welche Response Zeiten stellst Du Dir denn vor?
+Sieht gut aus. A steht wohl für irgendeinen Namen. Sollten wir vielleicht Heim und Gast verwenden?
 
 ${BB_EXPERT}
-Nicht Tore - Körbe. Ich will halt während des Spiels etwas eingeben und nicht irgendwie nachträglich. Was meinst Du mit Response Zeiten?
+Nein, "Mannschaft A" ist die offizielle Bezeichnung für die erstgenannte Mannschaft einer Spielansetzung und "Mannschaft B" ist die zweitgenannte Mannschaft.
 
 ${PROGRAMMER}
-Sorry - wir sind ja beim Basketball. Vergiss das mit den Response Zeiten. Ich verstehe unter Echtzeit etwas Anderes.
+Äh - es heißt also immer A gegen B?
+
+${BB_EXPERT}
+Richtig.
+
+${PROGRAMMER}
+Gut, dann werden wir das in unseren Beispielen so verwenden. Jetzt lass uns mal über die Geschichte mit der Eingabe von Toren usw. reden.
+
+${BB_EXPERT}
+Nicht Tore - Körbe.
+
+${PROGRAMMER}
+Sorry - wir sind ja beim Basketball.
 Wenn ich mich richtig erinnere, dann gibt jeder Korb ja zwei Punkte.
 
 ${BB_EXPERT}
@@ -135,8 +156,10 @@ wenn er einen Freiwurf trifft
 dann hat er 1 Punkt
 ]!
 
+
+
 ${BB_EXPERT}
-Das stimmt alles. Ich würde gerne immer den aktuellen Spielstand sehen. Können wir das aufnehmen.
+Das stimmt alles. Ich würde gerne immer den aktuellen Spielstand sehen. Können wir das aufnehmen?
 
 ${PROGRAMMER}
 Das ist dann also die Summe der Punkte der Spieler pro Mannschaft. Da baue ich eine Methode auf der Mannschaft, in der ich über ihre Spieler iteriere...
@@ -146,34 +169,44 @@ Zuerst geben wir die Spieler an.
 
 -!|comment|
 |Mannschaft|A|
-|Trikot|
-|0|
-|00|
-|1|
+|Trikot      |
+|99          |
+|98          |
+|97          |
 
 -!|comment|
 |Mannschaft|B|
-|Trikot|
-|1|
-|2|
-|3|
+|Trikot      |
+|1           |
+|2           |
+|3           |
 
 ${BB_EXPERT}
 
 OK, lass mich mal:
 
 ![
-Der Spielstand ist 0:0
+Es steht 0:0
 Spieler B1 trifft einen Feldkorb
+]!
+
+${PROGRAMMER}
+Wer ist denn jetzt B1 und wer steht vorne und wer hinten bei dem Spielstand.
+
+${BB_EXPERT}
+Das ist die Kurzbezeichnung, die wir für den Spieler Nummer 1 von Mannschaft B verwenden.
+
+Also weiter
+
+![
 Es steht 0:2
-Spieler A00 trifft einen Freiwurf
+Spieler A99 trifft einen Freiwurf
 Es steht 1:2
-Spieler A1 trifft einen Dreier
+Spieler A98 trifft einen Dreier
 Es steht 4:2
 Spieler B3 trifft einen Freiwurf
 Es steht 4:3
-
-
+]!
 
 ...
 
