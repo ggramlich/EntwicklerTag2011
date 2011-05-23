@@ -1,27 +1,40 @@
+!**> technical setup
+
 !define TEST_SYSTEM {slim}
 !define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
 
 !|import   |
 |Basketball|
 
+**!
+
 |Mannschaft|XYZ             |
 |Trikot    |Nachname|Vorname|
 |11        |Barea   |Jose   |
 |0         |Marion  |Shawn  |
 
-!|scenario|Spieler Nummer _ von _ ist _|Trikot, Mannschaftsname, Spielername|
-|start    |Wähle Spieler               |@Mannschaftsname      |@Trikot      |
-|check    |Spielername                 |@Spielername                        |
 
-![: script
+![ script
 Spieler Nummer 11 von XYZ ist Jose Barea
 Spieler Nummer 0 von XYZ ist Shawn Marion
 Spieler Nummer 23 von XYZ ist unbekannt
 Spieler Nummer 11 von A ist unbekannt
 ]!
 
-|Mannschaft|A|
-|Trikot      |
-|0           |
-|00          |
-|1           |
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb trifft
+dann hat er 2 Punkte
+]!
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Dreier trifft
+dann hat er 3 Punkte
+]!
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Freiwurf trifft
+dann hat er 1 Punkt
+]!

@@ -1,0 +1,16 @@
+!|scenario|Spieler Nummer _ von _ ist _|Trikot, Mannschaftsname, Spielername|
+|start    |Wähle Spieler               |@Mannschaftsname      |@Trikot      |
+|check    |Spielername                 |@Spielername                        |
+
+!|scenario |Gegeben ein Spieler mit _ Punkten|Punkte|
+|start     |Spieler Simulation                      |
+|set Punkte|@Punkte                                 |
+
+!|scenario|wenn er einen _ trifft|TrefferArt|
+|trifft   |@TrefferArt                      |
+
+!|scenario|dann hat er _ Punkte|Punkte |
+|check    |punkte              |@Punkte|
+
+!|scenario|dann hat er _ Punkt|Punkte|
+|dann hat er @Punkte Punkte          |

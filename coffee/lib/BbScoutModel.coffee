@@ -19,7 +19,7 @@ root.BbScout.model = {
       @nachname
       @punkte = 0;
 
-    name: () -> @vorname + " " + @nachname if (@vorname? and @nachname)
+    name: -> @vorname + " " + @nachname if (@vorname? and @nachname)
 
     trifft: (punkte) -> @punkte = punkte
 

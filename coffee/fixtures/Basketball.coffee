@@ -14,7 +14,7 @@ class Mannschaft
   setNachname: (@nachname) ->
   setVorname: (@vorname) ->
 
-  execute: () ->
+  execute: ->
     spieler = new model.Spieler(@trikot);
     spieler.nachname = @nachname
     spieler.vorname = @vorname
@@ -24,14 +24,24 @@ class WaehleSpieler
   constructor: (@mannschaft, @trikot) ->
     @spieler = model.mannschaften[@mannschaft]?.getSpieler(@trikot)
 
-  Spielername: () -> @spieler?.name() ? 'unbekannt'
+  Spielername: -> @spieler?.name() ? 'unbekannt'
 
+class SpielerSimulation
+  @TRIKOT: '1'
+  constructor: -> @spieler = new model.Spieler(@TRIKOT)
+
+  setPunkte: (punkte) -> @spieler.punkte = punkte
+
+  trifft: (trefferArt) -> @spieler['trifft' + trefferArt]()
+
+  punkte: -> @spieler.punkte
 
 # Exportiere die fixtures als Modul Basketball
 
 this.Basketball =
   Mannschaft: Mannschaft
   WähleSpieler: WaehleSpieler
+  SpielerSimulation: SpielerSimulation
 
 
 
