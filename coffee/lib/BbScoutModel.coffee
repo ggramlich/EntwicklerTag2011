@@ -3,7 +3,7 @@ root.BbScout ?= {};
 root.BbScout.model = {
   mannschaften: {}
 
-  Mannschaft: class Mannschaft
+  Mannschaft: class
     constructor: (@name) ->
       @spielerListe = {}
 
@@ -13,13 +13,10 @@ root.BbScout.model = {
     getSpieler: (trikot) ->
       @spielerListe[trikot]
 
-  Spieler: class Spieler
-    constructor: (@trikot) ->
-      @vorname
-      @nachname
-      @punkte = 0;
+  Spieler: class
+    constructor: (@trikot, @vorname = '', @nachname = '', @punkte = 0) ->
 
-    name: -> @vorname + " " + @nachname if (@vorname? and @nachname)
+    name: -> @vorname + " " + @nachname
 
     trifft: (punkte) -> @punkte = punkte
 
