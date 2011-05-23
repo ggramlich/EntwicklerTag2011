@@ -1,3 +1,10 @@
+loadFile = (filename) ->
+  JsSlim.loadJsFile(filename + '.js')
+
+loadFile('BbScoutModel');
+
+model = this.BbScout.model
+
 class Mannschaft
   constructor: (@name) ->
     @mannschaft = new model.Mannschaft(@name)
@@ -26,26 +33,5 @@ this.Basketball =
   Mannschaft: Mannschaft
   WähleSpieler: WaehleSpieler
 
-# Definitionen des Modells
-
-model =
-  mannschaften: {}
-
-  Mannschaft: class Mannschaft
-    constructor: (@name) ->
-      @spielerListe = {}
-
-    addSpieler: (spieler) ->
-      @spielerListe[spieler.trikot] = spieler
-
-    getSpieler: (trikot) ->
-      @spielerListe[trikot]
-
-  Spieler: class Spieler
-    constructor: (@trikot) ->
-      @vorname
-      @nachname
-
-    name: () -> @vorname + " " + @nachname if (@vorname? and @nachname)
 
 
