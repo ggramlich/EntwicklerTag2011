@@ -29,6 +29,11 @@ describe 'Spieler', ->
     spieler.trifftFreiwurf()
     expect(spieler.punkte).toBe 1
 
+  it 'soll fünf Punkte nach einem Feldkorb und einem Dreier haben', ->
+    spieler.trifftFeldkorb()
+    spieler.trifftDreier()
+    expect(spieler.punkte).toBe 5
+
 describe 'Mannschaft', ->
   mannschaft = spieler = null
 
@@ -43,4 +48,16 @@ describe 'Mannschaft', ->
     mannschaft.addSpieler spieler
     expect(mannschaft.getSpieler '23').toBe spieler
 
+  it 'soll 0 Punkte zu Beginn haben', ->
+    expect(mannschaft.punkte()).toBe 0
+
+  it 'soll die Summe der Spielerpunkte berechnen', ->
+    spieler2 = new model.Spieler('2')
+    mannschaft.addSpieler spieler
+    mannschaft.addSpieler spieler2
+    expect(mannschaft.punkte()).toBe 0
+    spieler.punkte = 4
+    expect(mannschaft.punkte()).toBe 4
+    spieler2.punkte = 3
+    expect(mannschaft.punkte()).toBe 7
 

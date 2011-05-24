@@ -13,12 +13,18 @@ root.BbScout.model = {
     getSpieler: (trikot) ->
       @spielerListe[trikot]
 
+    punkte: ->
+      summe = 0
+      for own trikot, spieler of @spielerListe
+        summe += spieler.punkte
+      summe
+
   Spieler: class
     constructor: (@trikot, @vorname = '', @nachname = '', @punkte = 0) ->
 
     name: -> @vorname + " " + @nachname
 
-    trifft: (punkte) -> @punkte = punkte
+    trifft: (punkte) -> @punkte += punkte
 
     trifftFeldkorb: -> @trifft(2)
 
