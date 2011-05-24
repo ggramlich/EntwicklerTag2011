@@ -4,6 +4,7 @@ Spieler in Mannschaft
 |start    |Wähle Spieler               |@Mannschaftsname      |@Trikot      |
 |check    |Spielername                 |@Spielername                        |
 
+----
 Spieler und Punkte
 
 !|scenario |Gegeben ein Spieler mit _ Punkten|Punkte|
@@ -19,6 +20,17 @@ Spieler und Punkte
 !|scenario|dann hat er _ Punkt|Punkte|
 |dann hat er @Punkte Punkte          |
 
+----
+Treffer und Fehlwürfe
+
+!|scenario|dann hat er _ von _ _ getroffen|TrefferZahl, WurfZahl, TrefferArtPlural|
+|check    |treffer                        |@TrefferArtPlural     |@TrefferZahl    |
+|check    |wuerfe                         |@TrefferArtPlural     |@WurfZahl       |
+
+!|scenario|wenn er einen _ verfehlt|TrefferArt|
+|verfehlt |@TrefferArt                        |
+
+----
 Spielstand
 
 !|scenario|Das Spiel zwischen _ und _ beginnt|MannschaftA, MannschaftB |

@@ -1,0 +1,63 @@
+Wir wollen nicht nur die Punkte, sondern auch die Anzahl der Treffer und der Fehlwürfe zählen
+
+Freiwürfe
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+dann hat er 0 von 0 Freiwürfen getroffen
+wenn er einen Freiwurf trifft
+dann hat er 1 von 1 Freiwürfen getroffen
+]!
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Freiwurf verfehlt
+dann hat er 0 von 1 Freiwürfen getroffen
+wenn er einen Freiwurf trifft
+dann hat er 1 von 2 Freiwürfen getroffen
+]!
+
+Feldkörbe
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+dann hat er 0 von 0 Feldkörben getroffen
+wenn er einen Feldkorb trifft
+dann hat er 1 von 1 Feldkörben getroffen
+]!
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb verfehlt
+dann hat er 0 von 1 Feldkörben getroffen
+wenn er einen Feldkorb trifft
+dann hat er 1 von 2 Feldkörben getroffen
+]!
+
+Dreier
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+dann hat er 0 von 0 Dreier getroffen
+wenn er einen Dreier trifft
+dann hat er 1 von 1 Dreier getroffen
+]!
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Dreier verfehlt
+dann hat er 0 von 1 Dreier getroffen
+wenn er einen Dreier trifft
+dann hat er 1 von 2 Dreier getroffen
+]!
+
+Gemischt
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb verfehlt
+wenn er einen Freiwurf trifft
+wenn er einen Feldkorb trifft
+wenn er einen Freiwurf trifft
+dann hat er 2 von 2 Freiwürfen getroffen
+dann hat er 1 von 2 Feldkörben getroffen
+dann hat er 0 von 0 Dreier getroffen
+]!
+

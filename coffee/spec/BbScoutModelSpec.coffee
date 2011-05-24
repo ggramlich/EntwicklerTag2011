@@ -17,22 +17,37 @@ describe 'Spieler', ->
   it 'soll keine Punkte am Anfang haben', ->
     expect(spieler.punkte).toBe 0
 
+  it 'soll einen Fehler werfen, wenn die Trefferart unbekannt ist', ->
+    expect(-> spieler.trifft 'x').toThrow new Error 'Unbekannte Trefferart "x"'
+
   it 'soll zwei Punkte nach einem Feldkorb haben', ->
-    spieler.trifftFeldkorb()
+    spieler.trifft 'Feldkorb'
     expect(spieler.punkte).toBe 2
 
   it 'soll drei Punkte nach einem Dreier haben', ->
-    spieler.trifftDreier()
+    spieler.trifft 'Dreier'
     expect(spieler.punkte).toBe 3
 
   it 'soll einen Punkt nach einem Freiwurf haben', ->
-    spieler.trifftFreiwurf()
+    spieler.trifft 'Freiwurf'
     expect(spieler.punkte).toBe 1
 
   it 'soll fünf Punkte nach einem Feldkorb und einem Dreier haben', ->
-    spieler.trifftFeldkorb()
-    spieler.trifftDreier()
+    spieler.trifft 'Feldkorb'
+    spieler.trifft 'Dreier'
     expect(spieler.punkte).toBe 5
+
+  it 'soll treffer zählen', ->
+    expect(spieler.treffer('Feldkorb')).toBe 0
+    spieler.trifft 'Feldkorb'
+    expect(spieler.treffer('Feldkorb')).toBe 1
+
+  it 'soll würfe zählen', ->
+    expect(spieler.wuerfe('Feldkorb')).toBe 0
+    spieler.verfehlt 'Feldkorb'
+    expect(spieler.wuerfe('Feldkorb')).toBe 1
+    spieler.trifft 'Feldkorb'
+    expect(spieler.wuerfe('Feldkorb')).toBe 2
 
 describe 'Mannschaft', ->
   mannschaft = spieler = null

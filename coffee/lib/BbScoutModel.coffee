@@ -1,6 +1,12 @@
 root = exports ? this
 root.BbScout ?= {};
-root.BbScout.model = {
+
+TrefferArten =
+  Freiwurf: 1
+  Feldkorb: 2
+  Dreier: 3
+
+root.BbScout.model =
   mannschaften: {}
 
   Mannschaft: class
@@ -21,16 +27,35 @@ root.BbScout.model = {
 
   Spieler: class
     constructor: (@trikot, @vorname = '', @nachname = '', @punkte = 0) ->
+      @statistik =
+          Freiwurf: {treffer: 0, wuerfe: 0}
+          Feldkorb: {treffer: 0, wuerfe: 0}
+          Dreier: {treffer: 0, wuerfe: 0}
 
     name: -> @vorname + " " + @nachname
 
-    trifft: (punkte) -> @punkte += punkte
+    trifft: (trefferArt) ->
+      @validateTrefferArt trefferArt
+      @punkte += @punkteFuer(trefferArt)
+      @statistik[trefferArt].treffer++
+      @statistik[trefferArt].wuerfe++
+    
+    verfehlt: (trefferArt) ->
+      @validateTrefferArt trefferArt
+      @statistik[trefferArt].wuerfe++
+    
+    punkteFuer: (trefferArt) ->
+      TrefferArten[trefferArt]
 
-    trifftFeldkorb: -> @trifft(2)
+#TODO move into TrefferArten
+    validateTrefferArt: (trefferArt) -> throw new Error('Unbekannte Trefferart "' + trefferArt + '"') unless TrefferArten[trefferArt]?
 
-    trifftDreier: -> @trifft(3)
+    treffer: (trefferArt) ->
+      @validateTrefferArt trefferArt
+      @statistik[trefferArt].treffer
+    
+    wuerfe: (trefferArt) ->
+      @validateTrefferArt trefferArt
+      @statistik[trefferArt].wuerfe
 
-    trifftFreiwurf: -> @trifft(1)
-
-}
 
