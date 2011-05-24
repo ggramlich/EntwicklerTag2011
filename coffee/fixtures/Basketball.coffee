@@ -36,12 +36,26 @@ class SpielerSimulation
 
   punkte: -> @spieler.punkte
 
+class SpielSimulation
+  constructor: (@mannschaftsnameA, @mannschaftsnameB) ->
+    @mannschaftA = @getMannschaft(@mannschaftsnameA)
+    @mannschaftB = @getMannschaft(@mannschaftsnameB)
+
+  spielstand: -> @mannschaftA?.punkte() + ':' + @mannschaftB?.punkte()
+  
+  spielerVonTrifft: (trikot, mannschaft, trefferArt) -> @getSpieler(mannschaft, trikot)?['trifft' + trefferArt]()
+  
+  getSpieler: (mannschaft, trikot) -> @getMannschaft(mannschaft)?.getSpieler(trikot)
+  
+  getMannschaft: (mannschaft) -> model.mannschaften[mannschaft]
+
 # Exportiere die fixtures als Modul Basketball
 
 this.Basketball =
   Mannschaft: Mannschaft
   WähleSpieler: WaehleSpieler
   SpielerSimulation: SpielerSimulation
+  SpielSimulation: SpielSimulation
 
 
 

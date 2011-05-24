@@ -1,6 +1,10 @@
+Spieler in Mannschaft
+
 !|scenario|Spieler Nummer _ von _ ist _|Trikot, Mannschaftsname, Spielername|
 |start    |Wähle Spieler               |@Mannschaftsname      |@Trikot      |
 |check    |Spielername                 |@Spielername                        |
+
+Spieler und Punkte
 
 !|scenario |Gegeben ein Spieler mit _ Punkten|Punkte|
 |start     |Spieler Simulation                      |
@@ -14,3 +18,15 @@
 
 !|scenario|dann hat er _ Punkt|Punkte|
 |dann hat er @Punkte Punkte          |
+
+Spielstand
+
+!|scenario|Das Spiel zwischen _ und _ beginnt|MannschaftA, MannschaftB |
+|start    |SpielSimulation                   |@MannschaftA|@MannschaftB|
+
+!|scenario|Es steht _|Spielstand |
+|check    |spielstand|@Spielstand|
+
+!|scenario|Spieler _ _ trifft einen _|Mannschaft, Trikot, TrefferArt    |
+|spieler  |@Trikot                   |von|@Mannschaft|trifft|@TrefferArt|
+

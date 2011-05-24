@@ -1,0 +1,17 @@
+!include -c BeispielMannschaften
+
+
+![ script
+Das Spiel zwischen A und B beginnt
+Es steht 0:0
+Spieler B 21 trifft einen Feldkorb
+Es steht 0:2
+Spieler A 99 trifft einen Freiwurf
+Es steht 1:2
+Spieler A 98 trifft einen Dreier
+Es steht 4:2
+Spieler B 23 trifft einen Freiwurf
+Es steht 4:3
+Spieler B 21 trifft einen Dreier
+Es steht 4:6
+]!
