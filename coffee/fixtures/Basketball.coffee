@@ -30,7 +30,7 @@ class SpielerSimulation
   @TRIKOT: '1'
   constructor: -> @spieler = new model.Spieler(@TRIKOT)
 
-  setPunkte: (punkte) -> @spieler.punkte = punkte
+  setPunkte: (punkte) -> @spieler.punkte = parseInt punkte
 
   trifft: (trefferArt) -> @spieler['trifft' + trefferArt]()
 
