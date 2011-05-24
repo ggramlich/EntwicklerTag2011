@@ -1,0 +1,12 @@
+|Mannschaft|XYZ             |
+|Trikot    |Nachname|Vorname|
+|11        |Barea   |Jose   |
+|0         |Marion  |Shawn  |
+
+
+![ script
+Spieler Nummer 11 von XYZ ist Jose Barea
+Spieler Nummer 0 von XYZ ist Shawn Marion
+Spieler Nummer 23 von XYZ ist unbekannt
+Spieler Nummer 11 von A ist unbekannt
+]!

@@ -1,0 +1,4 @@
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
+
+!contents

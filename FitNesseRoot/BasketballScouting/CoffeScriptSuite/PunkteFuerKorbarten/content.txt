@@ -1,0 +1,25 @@
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Freiwurf trifft
+dann hat er 1 Punkt
+]!
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb trifft
+dann hat er 2 Punkte
+]!
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Dreier trifft
+dann hat er 3 Punkte
+]!
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Dreier trifft
+wenn er einen Freiwurf trifft
+wenn er einen Feldkorb trifft
+dann hat er 6 Punkte
+]!
