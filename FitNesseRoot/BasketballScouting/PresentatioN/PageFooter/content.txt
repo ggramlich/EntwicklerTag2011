@@ -1,0 +1,5 @@
+!-
+<script type="text/javascript" src="/files/jquery-presentation/scripts/jquery.js"></script>
+<script type="text/javascript" src="/files/jquery-presentation/scripts/jquery.presentation-full.js"></script>
+<script type="text/javascript" src="/files/jquery-presentation/scripts/init.js"></script>
+-!

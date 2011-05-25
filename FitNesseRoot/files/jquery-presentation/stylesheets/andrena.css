@@ -1,0 +1,92 @@
+.andrena .main {
+    background: white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.andrenahide, .invisible {
+	display:none;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+
+#topbar {
+	background: url('../images/andrena-head-left.png') repeat-x;
+	width: 100%;
+	height: 130px;
+}
+
+.topbarimage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1347px;
+    height: 111px;
+}
+
+.andrena #header {
+    margin-top: 100px;    
+    color: blue;
+    background: none;
+}
+
+.andrena #slides br {
+	display: none;
+}
+
+.andrena .slide h1 {
+    font:36px Helvetica, Arial, Sans-Serif;
+    color: blue;
+}
+
+.andrena .slide {
+	padding: 0 60px;
+	position: absolute;
+	width: 90%;
+}
+
+.andrena #footer {
+    background: #a0afae;
+}
+
+.andrena .nav-prev-next {
+    top: auto;
+    bottom: 0;
+    right: 20px;
+    list-style: none;
+}
+
+.andrena tbody, .andrena tfoot, .andrena thead, .andrena tr, .andrena th, .andrena td {
+	border: 1px solid;
+	padding: 4px;
+}
+
+.andrena ul {
+	margin-top: 30px;
+	margin-left: 20px;
+	list-style: disc outside;
+}
+
+.andrena ul li {
+	padding: 5px 10px;
+}
+
+.andrena li ul {
+    margin: 10px 0 0 20px;
+	list-style-type: circle;
+}
+
+.andrena pre {
+	font-family: Courier, monospace;
+	padding: 20px;
+	background-color: #dddddd;
+}
+
+
+

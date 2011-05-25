@@ -1,0 +1,11 @@
+!contents -R2 -g -p -f -h
+
+!**< hidden definitions
+!define BEGIN_SLIDES {!-<script type="text/javascript">var showPresentation = true;</script><div id="content"><div id="slides">-!}
+!define PRESENTATION_FOOTER {!-<div id="footer"><div class="container"></div></div>-!}
+!define END_SLIDES {!-</div></div>-!${PRESENTATION_FOOTER}}
+!define BEGIN_SLIDE {!-<div class="slide">-!}
+!define END_SLIDE {!-</div>-!}
+
+
+**!

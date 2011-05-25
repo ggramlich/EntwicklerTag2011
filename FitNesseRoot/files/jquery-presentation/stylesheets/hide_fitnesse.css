@@ -1,0 +1,4 @@
+div.sidebar, div.header, div.footer, div#addChildPopup {
+    display: none;
+}
+

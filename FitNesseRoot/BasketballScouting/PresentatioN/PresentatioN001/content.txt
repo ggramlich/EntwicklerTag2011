@@ -1,0 +1,11 @@
+${BEGIN_SLIDES}${BEGIN_SLIDE}
+!1 Eine neue App muss her
+
+!-<p>-!
+!-</p>-!
+
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+${END_SLIDE}
+${END_SLIDES}
