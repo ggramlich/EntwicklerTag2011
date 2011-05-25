@@ -2,14 +2,14 @@ Definiere die Mannschaftsaufstellung von XYZ.
 
 |Mannschaft|XYZ             |
 |Trikot    |Nachname|Vorname|
-|11        |Barea   |Jose   |
 |0         |Marion  |Shawn  |
+|41        |Nowitzki|Dirk   |
 
 Die Spieler sind jetzt mit ihren Trikotnummern zugeordnet und wir können ihre Namen verifizieren.
 Spieler, deren Trikotnummern oder Mannschaft nicht bekannt ist, werden als "unbekannt" bezeichnet.
 
 ![ script
-Spieler Nummer 11 von XYZ ist Jose Barea
+Spieler Nummer 41 von XYZ ist Dirk Nowitzki
 Spieler Nummer 0 von XYZ ist Shawn Marion
 Spieler Nummer 23 von XYZ ist unbekannt
 Spieler Nummer 11 von A ist unbekannt
