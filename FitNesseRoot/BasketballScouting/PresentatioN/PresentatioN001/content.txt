@@ -41,6 +41,12 @@ ${END_SLIDE}${BEGIN_SLIDE}
 ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
+<img src="/files/cartoons/ET006a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
 <img src="/files/cartoons/ET007.jpg" class="cartoon" />
 </p>-!
 
@@ -71,6 +77,12 @@ ${END_SLIDE}${BEGIN_SLIDE}
 ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
+<img src="/files/cartoons/ET011a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
 <img src="/files/cartoons/ET012.jpg" class="cartoon" />
 </p>-!
 
@@ -89,7 +101,19 @@ ${END_SLIDE}${BEGIN_SLIDE}
 ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
+<img src="/files/cartoons/ET014a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
 <img src="/files/cartoons/ET015.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET015a.jpg" class="cartoon" />
 </p>-!
 
 ${END_SLIDE}${BEGIN_SLIDE}
@@ -120,6 +144,114 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
 <img src="/files/cartoons/ET020.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET020a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET021.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET022.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET023.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET024.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET025.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET026.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET027.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET028.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET029.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET030.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET031.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET032.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET033.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET034.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET035.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET035a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET036.jpg" class="cartoon" />
 </p>-!
 
 
