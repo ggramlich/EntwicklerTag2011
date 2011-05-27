@@ -1,0 +1,12 @@
+|Mannschaft|XYZ             |
+|Trikot    |Nachname|Vorname|
+|0         |Marion  |Shawn  |
+|41        |Nowitzki|Dirk   |
+
+![ script
+Spieler Nummer 41 von XYZ ist Dirk Nowitzki
+Spieler Nummer 23 von XYZ ist unbekannt
+Spieler Nummer 11 von A ist unbekannt
+]!
+
+[[!-FitNesse-! Technik Einschub][<BasketballScouting.PresentatioN.PresentatioN002]]

@@ -122,6 +122,34 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
+|Mannschaft|XYZ             |
+|Trikot    |Nachname|Vorname|
+|0         |Marion  |Shawn  |
+|41        |Nowitzki|Dirk   |
+
+![ script
+Spieler Nummer 41 von XYZ ist Dirk Nowitzki
+Spieler Nummer 23 von XYZ ist unbekannt
+Spieler Nummer 11 von A ist unbekannt
+]!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+|Mannschaft|XYZ             |
+|Trikot    |Nachname|Vorname|
+|0         |Marion  |Shawn  |
+|41        |Nowitzki|Dirk   |
+
+![ script
+Spieler Nummer 41 von XYZ ist Dirk Nowitzki
+Spieler Nummer 23 von XYZ ist unbekannt
+Spieler Nummer 11 von A ist unbekannt
+]!
+
+[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.MannschaftsAufstellung]]
+
+${END_SLIDE}${BEGIN_SLIDE}
+
 !-<p class="cartoon">
 <img src="/files/cartoons/ET016.jpg" class="cartoon" />
 </p>-!

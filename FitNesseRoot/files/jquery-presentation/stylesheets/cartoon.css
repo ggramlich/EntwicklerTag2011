@@ -16,4 +16,7 @@ p.cartoon {
     padding-top:70px;
 }
 
+tr.hidden {
+  display:none;
+}
 
