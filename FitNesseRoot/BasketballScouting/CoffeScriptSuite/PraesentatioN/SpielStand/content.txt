@@ -1,0 +1,12 @@
+!include -c BeispielMannschaften
+
+![ script
+Das Spiel zwischen A und B beginnt
+Es steht 0:0
+Spieler B 21 trifft einen Freiwurf
+Es steht 0:1
+Spieler A 99 trifft einen Feldkorb
+Es steht 2:1
+]!
+
+[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN004]]

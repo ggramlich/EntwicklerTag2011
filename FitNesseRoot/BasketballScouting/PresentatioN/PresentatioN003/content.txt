@@ -35,6 +35,19 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
+![ script
+Das Spiel zwischen A und B beginnt
+Es steht 0:0
+Spieler B 21 trifft einen Freiwurf
+Es steht 0:1
+Spieler A 99 trifft einen Feldkorb
+Es steht 2:1
+]!
+
+[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.SpielerPunkte]]
+
+${END_SLIDE}${BEGIN_SLIDE}
+
 !-<p class="cartoon">
 <img src="/files/cartoons/ET030.jpg" class="cartoon" />
 </p>-!
