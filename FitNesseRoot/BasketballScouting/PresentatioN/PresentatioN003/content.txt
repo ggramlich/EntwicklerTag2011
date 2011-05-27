@@ -44,56 +44,7 @@ Spieler A 99 trifft einen Feldkorb
 Es steht 2:1
 ]!
 
-[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.SpielerPunkte]]
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET030.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET031.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET032.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET033.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET034.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET035.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET035a.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET036.jpg" class="cartoon" />
-</p>-!
-
+[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.SpielStand]]
 
 ${END_SLIDE}
 ${END_SLIDES}

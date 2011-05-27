@@ -1,0 +1,9 @@
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Freiwurf verfehlt
+dann hat er 0 von 1 Freiwürfen getroffen
+wenn er einen Freiwurf trifft
+dann hat er 1 von 2 Freiwürfen getroffen
+]!
+
+[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN005]]

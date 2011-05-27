@@ -1,4 +1,4 @@
-!include -c BeispielMannschaften
+!include -c <CoffeScriptSuite.BeispielMannschaften
 
 ![ script
 Das Spiel zwischen A und B beginnt
@@ -9,4 +9,4 @@ Spieler A 99 trifft einen Feldkorb
 Es steht 2:1
 ]!
 
-[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN004]]
+[[Spezifikation mit Beispielen][<BasketballScouting.PresentatioN.PresentatioN004]]
