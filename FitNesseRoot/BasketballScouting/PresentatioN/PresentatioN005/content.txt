@@ -1,0 +1,21 @@
+${BEGIN_SLIDES}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET035.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET035a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET036.jpg" class="cartoon" />
+</p>-!
+
+
+${END_SLIDE}
+${END_SLIDES}
