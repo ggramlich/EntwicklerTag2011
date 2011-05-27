@@ -1,6 +1,10 @@
 ${BEGIN_SLIDES}${BEGIN_SLIDE}
 
-Eine gemeinsame Sprache finden
+!1 Eine gemeinsame Sprache finden
+
+!2 Spezifikation mit Beispielen
+
+!2 Gregor Gramlich
 
 ${END_SLIDE}${BEGIN_SLIDE}
 

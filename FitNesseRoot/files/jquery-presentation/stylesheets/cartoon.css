@@ -2,3 +2,18 @@ p.cartoon {
   text-align:center;
 }
 
+.andrena #footer, ol.nav-pager, ul.nav-prev-next {
+  display:none;
+}
+
+.andrena .slide h2 {
+    font:24px Helvetica, Arial, Sans-Serif;
+    color: blue;
+    padding-top:70px;
+}
+
+.andrena .slide h1 {
+    padding-top:70px;
+}
+
+
