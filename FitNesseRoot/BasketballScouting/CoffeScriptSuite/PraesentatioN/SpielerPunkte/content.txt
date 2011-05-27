@@ -1,0 +1,9 @@
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb trifft
+dann hat er 2 Punkte
+wenn er einen Freiwurf trifft
+dann hat er 3 Punkte
+]!
+
+[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN003]]

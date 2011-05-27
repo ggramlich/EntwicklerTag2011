@@ -1,0 +1,81 @@
+${BEGIN_SLIDES}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET016.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET017.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET015a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET018.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET019.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET020.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET020a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET021.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET022.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET023.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET024.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+![ script
+Gegeben ein Spieler mit 0 Punkten
+wenn er einen Feldkorb trifft
+dann hat er 2 Punkte
+wenn er einen Freiwurf trifft
+dann hat er 3 Punkte
+]!
+
+[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.SpielerPunkte]]
+
+
+${END_SLIDE}
+${END_SLIDES}
