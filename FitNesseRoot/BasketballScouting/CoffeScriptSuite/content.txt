@@ -1,4 +1,12 @@
 !define TEST_SYSTEM {slim}
-!define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
+
+!define COMMAND_PATTERN (java -cp jsSlim.jar jsSlim.JsSlimService -i javascript)
+
+# To run the coffeescript compiler before running the tests,
+# you can uncomment the following !define COMMAND_PATTERN line on a linux machine 
+# which has the coffeescript compiler installed.
+# Under windows, you can create a .bat file that does the same as the coffeeslim.sh file.
+
+#!define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
 
 !contents

@@ -1,16 +1,15 @@
-!1 Welcome to [[FitNesse][FitNesse.FitNesse]]!
-!3 ''The fully integrated stand-alone acceptance testing framework and wiki.''
+!1 Eine gemeinsame Sprache finden
+!2 Spezifikation mit Beispielen
+Entwicklertag 2011
+Gregor Gramlich
+27.05.2011
 
-BasketballScouting
+Die Wiki Seiten zur Präsentation und den Akzeptanztests finden sich unter BasketballScouting.
 
+[[Direkt zur Präsentation][http://localhost:8070/BasketballScouting.PresentatioN.PresentatioN001]]
 
-# Here is a good place to add your first page (WikiWord). For example, MyTopLevelApplicationPage
-To add your first "page", click the [[Edit][FrontPage?edit]] button and add a [[!-WikiWord-!][FitNesse.UserGuide.WikiWord]] to the page.
-
-| '''To Learn More...'''|
-| [[A One-Minute Description][FitNesse.UserGuide.OneMinuteDescription]]|''What is [[FitNesse][FitNesse.FitNesse]]? Start here.''|
-| [[A Two-Minute Example][FitNesse.UserGuide.TwoMinuteExample]]|''A brief example. Read this one next.''|
-| [[User Guide][FitNesse.UserGuide]]|''Answer the rest of your questions here.''|
-| [[Acceptance Tests][FitNesse.SuiteAcceptanceTests]]|''FitNesse's suite of Acceptance Tests''|
+Die Beispiele greifen zurzeit auf die kompilierte !-JavaScript-! Version zu.
+Um die Implementierung des Basketball Statistik Systems in !-CoffeeScript-! zu ändern, benötigt man node.js mit npm und den coffeescript Compiler. Siehe http://jashkenas.github.com/coffee-script/#installation
+Wenn man dann die Seite BasketballScouting.CoffeScriptSuite bearbeitet (dort den Edit Knopf klicken), kann man den Coffescript Compiler aktivieren.
 
 !note Release v20110519
