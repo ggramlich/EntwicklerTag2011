@@ -29,8 +29,8 @@ class WaehleSpieler
 SpielerSimulation = (->
   TRIKOT = '1'
   TREFFER_ARTEN =
-    Freiwürfen: 'Freiwurf'
-    Feldkörben: 'Feldkorb'
+    'Freiwürfen': 'Freiwurf'
+    'Feldkörben': 'Feldkorb'
 
   class
     constructor: -> @spieler = new model.Spieler(TRIKOT)
