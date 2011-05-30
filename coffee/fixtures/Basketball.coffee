@@ -67,7 +67,7 @@ class SpielSimulation
 
 this.Basketball =
   Mannschaft: Mannschaft
-  WähleSpieler: WaehleSpieler
+  'WähleSpieler': WaehleSpieler
   SpielerSimulation: SpielerSimulation
   SpielSimulation: SpielSimulation
 
