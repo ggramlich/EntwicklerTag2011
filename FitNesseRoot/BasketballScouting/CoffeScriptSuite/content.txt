@@ -1,6 +1,6 @@
 !define TEST_SYSTEM {slim}
 
-!define COMMAND_PATTERN (java -cp jsSlim.jar jsSlim.JsSlimService -i javascript)
+!define COMMAND_PATTERN (java -Dfile.encoding=UTF-8 -cp jsSlim.jar jsSlim.JsSlimService -i javascript)
 
 # To run the coffeescript compiler before running the tests,
 # you can uncomment the following !define COMMAND_PATTERN line on a linux machine 

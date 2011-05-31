@@ -46,8 +46,8 @@
     var TREFFER_ARTEN, TRIKOT;
     TRIKOT = '1';
     TREFFER_ARTEN = {
-      'Freiwürfen': 'Freiwurf',
-      'Feldkörben': 'Feldkorb'
+      Freiwürfen: 'Freiwurf',
+      Feldkörben: 'Feldkorb'
     };
     return (function() {
       function _Class() {
@@ -104,7 +104,7 @@
   })();
   this.Basketball = {
     Mannschaft: Mannschaft,
-    'WähleSpieler': WaehleSpieler,
+    WähleSpieler: WaehleSpieler,
     SpielerSimulation: SpielerSimulation,
     SpielSimulation: SpielSimulation
   };
