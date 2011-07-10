@@ -6,7 +6,7 @@ Gregor Gramlich
 
 Die Wiki Seiten zur Präsentation und den Akzeptanztests finden sich unter BasketballScouting.
 
-[[Direkt zur Präsentation][http://localhost:8070/BasketballScouting.PresentatioN.PresentatioN001]]
+[[Direkt zur Präsentation][BasketballScouting.PresentatioN.PresentatioN001]]
 
 Die Beispiele greifen zurzeit auf die kompilierte !-JavaScript-! Version zu.
 Um die Implementierung des Basketball Statistik Systems in !-CoffeeScript-! zu ändern, benötigt man node.js mit npm und den coffeescript Compiler. Siehe http://jashkenas.github.com/coffee-script/#installation
