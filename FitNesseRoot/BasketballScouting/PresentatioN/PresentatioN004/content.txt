@@ -12,33 +12,11 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
-!-<p class="cartoon">
-<img src="/files/cartoons/ET032.jpg" class="cartoon" />
-</p>-!
+!2 Gojko Adzic: http://www.gojko.net
 
-${END_SLIDE}${BEGIN_SLIDE}
+!2 Ken Pugh: Lean-Agile Acceptance Test-Driven Development: Better Software Through Collaboration
 
-!-<p class="cartoon">
-<img src="/files/cartoons/ET033.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET034.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-![ script
-Gegeben ein Spieler mit 0 Punkten
-wenn er einen Freiwurf verfehlt
-dann hat er 0 von 1 Freiwürfen getroffen
-wenn er einen Freiwurf trifft
-dann hat er 1 von 2 Freiwürfen getroffen
-]!
-
-[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.FehlWuerfe]]
+!2 http://github.com/ggramlich/EntwicklerTag2011
 
 ${END_SLIDE}
 ${END_SLIDES}

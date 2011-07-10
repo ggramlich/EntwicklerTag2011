@@ -1,48 +1,6 @@
 ${BEGIN_SLIDES}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
-<img src="/files/cartoons/ET016.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET017.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET015a.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET018.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET019.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET020.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET020a.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
 <img src="/files/cartoons/ET021.jpg" class="cartoon" />
 </p>-!
 

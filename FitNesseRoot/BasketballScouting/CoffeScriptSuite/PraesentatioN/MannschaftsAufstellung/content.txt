@@ -9,4 +9,4 @@ Spieler Nummer 23 von XYZ ist unbekannt
 Spieler Nummer 11 von A ist unbekannt
 ]!
 
-[[!-FitNesse-! Technik Einschub][<BasketballScouting.PresentatioN.PresentatioN002]]
+[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN002]]
