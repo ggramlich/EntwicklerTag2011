@@ -9,4 +9,5 @@ Spieler Nummer 23 von XYZ ist unbekannt
 Spieler Nummer 41 von A ist unbekannt
 ]!
 
-[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN002]]
+#[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN002]]
+[[Die nächsten Beispiele][SpielerPunkte]]

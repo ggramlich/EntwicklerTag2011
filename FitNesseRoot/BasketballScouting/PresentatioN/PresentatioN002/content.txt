@@ -1,25 +1,7 @@
 ${BEGIN_SLIDES}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
-<img src="/files/cartoons/ET021.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
 <img src="/files/cartoons/ET022.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET023.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET024.jpg" class="cartoon" />
 </p>-!
 
 ${END_SLIDE}${BEGIN_SLIDE}
