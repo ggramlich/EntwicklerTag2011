@@ -6,4 +6,5 @@ wenn er einen Freiwurf trifft
 dann hat er 3 Punkte
 ]!
 
-[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN003]]
+#[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN003]]
+[[Die nächsten Beispiele][SpielStand]]
