@@ -7,6 +7,6 @@
 # which has the coffeescript compiler installed.
 # Under windows, you can create a .bat file that does the same as the coffeeslim.sh file.
 
-#!define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
+!define COMMAND_PATTERN (${FITNESSE_ROOTPATH}/coffeeslim.sh)
 
 !contents
