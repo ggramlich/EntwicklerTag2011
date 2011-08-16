@@ -74,7 +74,7 @@ Spieler Nummer 23 von XYZ ist unbekannt
 Spieler Nummer 11 von A ist unbekannt
 ]!
 
-[[Testsystem][<BasketballScouting.CoffeScriptSuite.PraesentatioN.MannschaftsAufstellung]]
+[[Testsystem][<BasketballScouting.CoffeScriptSuite.GeneralSuite.DeutscheTests.PraesentatioN.MannschaftsAufstellung]]
 
 ${END_SLIDE}
 ${END_SLIDES}

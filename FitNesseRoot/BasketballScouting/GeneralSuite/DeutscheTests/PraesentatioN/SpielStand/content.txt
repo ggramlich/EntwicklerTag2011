@@ -1,4 +1,4 @@
-!include -c <CoffeScriptSuite.BeispielMannschaften
+!include -c <DeutscheTests.BeispielMannschaften
 
 ![ script
 Das Spiel zwischen A und B beginnt
