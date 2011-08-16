@@ -35,27 +35,27 @@ root.BbScout.model =
     name: -> @vorname + " " + @nachname
 
     trifft: (trefferArt) ->
-      @validateTrefferArt trefferArt
+      return false unless @validateTrefferArt trefferArt
       @punkte += @punkteFuer(trefferArt)
       @statistik[trefferArt].treffer++
       @statistik[trefferArt].wuerfe++
     
     verfehlt: (trefferArt) ->
-      @validateTrefferArt trefferArt
+      return false unless @validateTrefferArt trefferArt
       @statistik[trefferArt].wuerfe++
     
     punkteFuer: (trefferArt) ->
       TrefferArten[trefferArt]
 
 #TODO move into TrefferArten
-    validateTrefferArt: (trefferArt) -> throw new Error('Unbekannte Trefferart "' + trefferArt + '"') unless TrefferArten[trefferArt]?
+    validateTrefferArt: (trefferArt) -> TrefferArten[trefferArt]?
 
     treffer: (trefferArt) ->
-      @validateTrefferArt trefferArt
+      return false unless @validateTrefferArt trefferArt
       @statistik[trefferArt].treffer
     
     wuerfe: (trefferArt) ->
-      @validateTrefferArt trefferArt
+      return false unless @validateTrefferArt trefferArt
       @statistik[trefferArt].wuerfe
 
 

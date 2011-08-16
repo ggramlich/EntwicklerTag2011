@@ -90,8 +90,12 @@
       return ((_ref = this.mannschaftA) != null ? _ref.punkte() : void 0) + ':' + ((_ref2 = this.mannschaftB) != null ? _ref2.punkte() : void 0);
     };
     SpielSimulation.prototype.spielerVonTrifft = function(trikot, mannschaft, trefferArt) {
-      var _ref;
-      return (_ref = this.getSpieler(mannschaft, trikot)) != null ? _ref.trifft(trefferArt) : void 0;
+      var spieler;
+      spieler = this.getSpieler(mannschaft, trikot);
+      if (spieler != null) {
+        spieler.trifft(trefferArt);
+      }
+      return spieler != null;
     };
     SpielSimulation.prototype.getSpieler = function(mannschaft, trikot) {
       var _ref;

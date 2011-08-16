@@ -57,7 +57,10 @@ class SpielSimulation
 
   spielstand: -> @mannschaftA?.punkte() + ':' + @mannschaftB?.punkte()
   
-  spielerVonTrifft: (trikot, mannschaft, trefferArt) -> @getSpieler(mannschaft, trikot)?.trifft trefferArt
+  spielerVonTrifft: (trikot, mannschaft, trefferArt) ->
+    spieler = @getSpieler(mannschaft, trikot)
+    spieler?.trifft trefferArt
+    spieler?
   
   getSpieler: (mannschaft, trikot) -> @getMannschaft(mannschaft)?.getSpieler(trikot)
   

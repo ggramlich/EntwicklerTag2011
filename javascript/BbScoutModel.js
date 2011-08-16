@@ -63,29 +63,35 @@
         return this.vorname + " " + this.nachname;
       };
       _Class.prototype.trifft = function(trefferArt) {
-        this.validateTrefferArt(trefferArt);
+        if (!this.validateTrefferArt(trefferArt)) {
+          return false;
+        }
         this.punkte += this.punkteFuer(trefferArt);
         this.statistik[trefferArt].treffer++;
         return this.statistik[trefferArt].wuerfe++;
       };
       _Class.prototype.verfehlt = function(trefferArt) {
-        this.validateTrefferArt(trefferArt);
+        if (!this.validateTrefferArt(trefferArt)) {
+          return false;
+        }
         return this.statistik[trefferArt].wuerfe++;
       };
       _Class.prototype.punkteFuer = function(trefferArt) {
         return TrefferArten[trefferArt];
       };
       _Class.prototype.validateTrefferArt = function(trefferArt) {
-        if (TrefferArten[trefferArt] == null) {
-          throw new Error('Unbekannte Trefferart "' + trefferArt + '"');
-        }
+        return TrefferArten[trefferArt] != null;
       };
       _Class.prototype.treffer = function(trefferArt) {
-        this.validateTrefferArt(trefferArt);
+        if (!this.validateTrefferArt(trefferArt)) {
+          return false;
+        }
         return this.statistik[trefferArt].treffer;
       };
       _Class.prototype.wuerfe = function(trefferArt) {
-        this.validateTrefferArt(trefferArt);
+        if (!this.validateTrefferArt(trefferArt)) {
+          return false;
+        }
         return this.statistik[trefferArt].wuerfe;
       };
       return _Class;
