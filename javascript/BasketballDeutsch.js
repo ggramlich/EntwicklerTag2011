@@ -106,7 +106,7 @@
     };
     return SpielSimulation;
   })();
-  this.Basketball = {
+  this.BasketballDeutsch = {
     Mannschaft: Mannschaft,
     WähleSpieler: WaehleSpieler,
     SpielerSimulation: SpielerSimulation,

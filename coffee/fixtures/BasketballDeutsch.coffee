@@ -68,7 +68,7 @@ class SpielSimulation
 
 # Exportiere die fixtures als Modul Basketball
 
-this.Basketball =
+this.BasketballDeutsch =
   Mannschaft: Mannschaft
   WähleSpieler: WaehleSpieler
   SpielerSimulation: SpielerSimulation
