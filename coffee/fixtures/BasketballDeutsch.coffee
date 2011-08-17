@@ -7,47 +7,51 @@ model = this.BbScout.model
 
 class Mannschaft
   constructor: (@name) ->
-    @mannschaft = new model.Mannschaft(@name)
-    model.mannschaften[@name] = @mannschaft
+    @mannschaft = new model.Team(@name)
+    model.teams[@name] = @mannschaft
 
   setTrikot: (@trikot) ->
   setNachname: (@nachname) ->
   setVorname: (@vorname) ->
 
   execute: ->
-    spieler = new model.Spieler(@trikot);
-    spieler.nachname = @nachname
-    spieler.vorname = @vorname
-    @mannschaft.addSpieler spieler
+    spieler = new model.Player(@trikot, @vorname, @nachname);
+    @mannschaft.addPlayer spieler
 
 class WaehleSpieler
   constructor: (@mannschaft, @trikot) ->
-    @spieler = model.mannschaften[@mannschaft]?.getSpieler(@trikot)
+    @spieler = model.teams[@mannschaft]?.getPlayer(@trikot)
 
   Spielername: -> @spieler?.name() ? 'unbekannt'
 
+TREFFER_ARTEN =
+  Freiwürfen: 'Freethrow'
+  Freiwürfe: 'Freethrow'
+  Freiwurf: 'Freethrow'
+  Feldkörben: 'Fieldgoal'
+  Feldkörbe: 'Fieldgoal'
+  Feldkorb: 'Fieldgoal'
+  Dreier: 'Threepointer'
+
+trefferArtEnglisch = (trefferArt) -> TREFFER_ARTEN[trefferArt]
+
 SpielerSimulation = (->
   TRIKOT = '1'
-  TREFFER_ARTEN =
-    Freiwürfen: 'Freiwurf'
-    Feldkörben: 'Feldkorb'
 
   class
-    constructor: -> @spieler = new model.Spieler(TRIKOT)
+    constructor: -> @spieler = new model.Player(TRIKOT)
 
-    punkte: -> @spieler.punkte
+    punkte: -> @spieler.points
 
-    setPunkte: (punkte) -> @spieler.punkte = parseInt punkte
+    setPunkte: (punkte) -> @spieler.points = parseInt punkte
 
-    trifft: (trefferArt) -> @spieler.trifft trefferArt
+    trifft: (trefferArt) -> @spieler.scores trefferArtEnglisch(trefferArt)
 
-    verfehlt: (trefferArt) -> @spieler.verfehlt trefferArt
+    verfehlt: (trefferArt) -> @spieler.misses trefferArtEnglisch(trefferArt)
 
-    treffer: (trefferArt) -> @spieler.treffer @trefferArtSingular(trefferArt)
+    treffer: (trefferArt) -> @spieler.scored trefferArtEnglisch(trefferArt)
 
-    wuerfe: (trefferArt) -> @spieler.wuerfe @trefferArtSingular(trefferArt)
-
-    trefferArtSingular: (trefferArt) -> TREFFER_ARTEN[trefferArt] ? trefferArt
+    wuerfe: (trefferArt) -> @spieler.attempted trefferArtEnglisch(trefferArt)
 )()
 
 class SpielSimulation
@@ -55,16 +59,16 @@ class SpielSimulation
     @mannschaftA = @getMannschaft(@mannschaftsnameA)
     @mannschaftB = @getMannschaft(@mannschaftsnameB)
 
-  spielstand: -> @mannschaftA?.punkte() + ':' + @mannschaftB?.punkte()
+  spielstand: -> @mannschaftA?.points() + ':' + @mannschaftB?.points()
   
   spielerVonTrifft: (trikot, mannschaft, trefferArt) ->
     spieler = @getSpieler(mannschaft, trikot)
-    spieler?.trifft trefferArt
-    spieler?
+    trefferArtOk = spieler?.scores trefferArtEnglisch(trefferArt)
+    spieler? and trefferArtOk
   
-  getSpieler: (mannschaft, trikot) -> @getMannschaft(mannschaft)?.getSpieler(trikot)
+  getSpieler: (mannschaft, trikot) -> @getMannschaft(mannschaft)?.getPlayer(trikot)
   
-  getMannschaft: (mannschaft) -> model.mannschaften[mannschaft]
+  getMannschaft: (mannschaft) -> model.teams[mannschaft]
 
 # Exportiere die fixtures als Modul Basketball
 

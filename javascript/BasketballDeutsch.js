@@ -1,5 +1,5 @@
 (function() {
-  var Mannschaft, SpielSimulation, SpielerSimulation, WaehleSpieler, loadFile, model;
+  var Mannschaft, SpielSimulation, SpielerSimulation, TREFFER_ARTEN, WaehleSpieler, loadFile, model, trefferArtEnglisch;
   loadFile = function(filename) {
     return JsSlim.loadJsFile(filename + '.js');
   };
@@ -8,8 +8,8 @@
   Mannschaft = (function() {
     function Mannschaft(name) {
       this.name = name;
-      this.mannschaft = new model.Mannschaft(this.name);
-      model.mannschaften[this.name] = this.mannschaft;
+      this.mannschaft = new model.Team(this.name);
+      model.teams[this.name] = this.mannschaft;
     }
     Mannschaft.prototype.setTrikot = function(trikot) {
       this.trikot = trikot;
@@ -22,10 +22,8 @@
     };
     Mannschaft.prototype.execute = function() {
       var spieler;
-      spieler = new model.Spieler(this.trikot);
-      spieler.nachname = this.nachname;
-      spieler.vorname = this.vorname;
-      return this.mannschaft.addSpieler(spieler);
+      spieler = new model.Player(this.trikot, this.vorname, this.nachname);
+      return this.mannschaft.addPlayer(spieler);
     };
     return Mannschaft;
   })();
@@ -34,7 +32,7 @@
       var _ref;
       this.mannschaft = mannschaft;
       this.trikot = trikot;
-      this.spieler = (_ref = model.mannschaften[this.mannschaft]) != null ? _ref.getSpieler(this.trikot) : void 0;
+      this.spieler = (_ref = model.teams[this.mannschaft]) != null ? _ref.getPlayer(this.trikot) : void 0;
     }
     WaehleSpieler.prototype.Spielername = function() {
       var _ref, _ref2;
@@ -42,38 +40,42 @@
     };
     return WaehleSpieler;
   })();
+  TREFFER_ARTEN = {
+    Freiwürfen: 'Freethrow',
+    Freiwürfe: 'Freethrow',
+    Freiwurf: 'Freethrow',
+    Feldkörben: 'Fieldgoal',
+    Feldkörbe: 'Fieldgoal',
+    Feldkorb: 'Fieldgoal',
+    Dreier: 'Threepointer'
+  };
+  trefferArtEnglisch = function(trefferArt) {
+    return TREFFER_ARTEN[trefferArt];
+  };
   SpielerSimulation = (function() {
-    var TREFFER_ARTEN, TRIKOT;
+    var TRIKOT;
     TRIKOT = '1';
-    TREFFER_ARTEN = {
-      Freiwürfen: 'Freiwurf',
-      Feldkörben: 'Feldkorb'
-    };
     return (function() {
       function _Class() {
-        this.spieler = new model.Spieler(TRIKOT);
+        this.spieler = new model.Player(TRIKOT);
       }
       _Class.prototype.punkte = function() {
-        return this.spieler.punkte;
+        return this.spieler.points;
       };
       _Class.prototype.setPunkte = function(punkte) {
-        return this.spieler.punkte = parseInt(punkte);
+        return this.spieler.points = parseInt(punkte);
       };
       _Class.prototype.trifft = function(trefferArt) {
-        return this.spieler.trifft(trefferArt);
+        return this.spieler.scores(trefferArtEnglisch(trefferArt));
       };
       _Class.prototype.verfehlt = function(trefferArt) {
-        return this.spieler.verfehlt(trefferArt);
+        return this.spieler.misses(trefferArtEnglisch(trefferArt));
       };
       _Class.prototype.treffer = function(trefferArt) {
-        return this.spieler.treffer(this.trefferArtSingular(trefferArt));
+        return this.spieler.scored(trefferArtEnglisch(trefferArt));
       };
       _Class.prototype.wuerfe = function(trefferArt) {
-        return this.spieler.wuerfe(this.trefferArtSingular(trefferArt));
-      };
-      _Class.prototype.trefferArtSingular = function(trefferArt) {
-        var _ref;
-        return (_ref = TREFFER_ARTEN[trefferArt]) != null ? _ref : trefferArt;
+        return this.spieler.attempted(trefferArtEnglisch(trefferArt));
       };
       return _Class;
     })();
@@ -87,22 +89,20 @@
     }
     SpielSimulation.prototype.spielstand = function() {
       var _ref, _ref2;
-      return ((_ref = this.mannschaftA) != null ? _ref.punkte() : void 0) + ':' + ((_ref2 = this.mannschaftB) != null ? _ref2.punkte() : void 0);
+      return ((_ref = this.mannschaftA) != null ? _ref.points() : void 0) + ':' + ((_ref2 = this.mannschaftB) != null ? _ref2.points() : void 0);
     };
     SpielSimulation.prototype.spielerVonTrifft = function(trikot, mannschaft, trefferArt) {
-      var spieler;
+      var spieler, trefferArtOk;
       spieler = this.getSpieler(mannschaft, trikot);
-      if (spieler != null) {
-        spieler.trifft(trefferArt);
-      }
-      return spieler != null;
+      trefferArtOk = spieler != null ? spieler.scores(trefferArtEnglisch(trefferArt)) : void 0;
+      return (spieler != null) && trefferArtOk;
     };
     SpielSimulation.prototype.getSpieler = function(mannschaft, trikot) {
       var _ref;
-      return (_ref = this.getMannschaft(mannschaft)) != null ? _ref.getSpieler(trikot) : void 0;
+      return (_ref = this.getMannschaft(mannschaft)) != null ? _ref.getPlayer(trikot) : void 0;
     };
     SpielSimulation.prototype.getMannschaft = function(mannschaft) {
-      return model.mannschaften[mannschaft];
+      return model.teams[mannschaft];
     };
     return SpielSimulation;
   })();

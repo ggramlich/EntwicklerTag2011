@@ -1,61 +1,61 @@
 root = exports ? this
 root.BbScout ?= {};
 
-TrefferArten =
-  Freiwurf: 1
-  Feldkorb: 2
-  Dreier: 3
+PointTypes =
+  Freethrow: 1
+  Fieldgoal: 2
+  Threepointer: 3
 
 root.BbScout.model =
-  mannschaften: {}
+  teams: {}
 
-  Mannschaft: class
+  Team: class
     constructor: (@name) ->
-      @spielerListe = {}
+      @playersList = {}
 
-    addSpieler: (spieler) ->
-      @spielerListe[spieler.trikot] = spieler
+    addPlayer: (player) ->
+      @playersList[player.number] = player
 
-    getSpieler: (trikot) ->
-      @spielerListe[trikot]
+    getPlayer: (number) ->
+      @playersList[number]
 
-    punkte: ->
-      summe = 0
-      for own trikot, spieler of @spielerListe
-        summe += spieler.punkte
-      summe
+    points: ->
+      sum = 0
+      for own number, player of @playersList
+        sum += player.points
+      sum
 
-  Spieler: class
-    constructor: (@trikot, @vorname = '', @nachname = '', @punkte = 0) ->
-      @statistik =
-          Freiwurf: {treffer: 0, wuerfe: 0}
-          Feldkorb: {treffer: 0, wuerfe: 0}
-          Dreier: {treffer: 0, wuerfe: 0}
+  Player: class
+    constructor: (@number, @firstName = '', @lastName = '', @points = 0) ->
+      @stats =
+          Freethrow: {scored: 0, attempted: 0}
+          Fieldgoal: {scored: 0, attempted: 0}
+          Threepointer: {scored: 0, attempted: 0}
 
-    name: -> @vorname + " " + @nachname
+    name: -> @firstName + " " + @lastName
 
-    trifft: (trefferArt) ->
-      return false unless @validateTrefferArt trefferArt
-      @punkte += @punkteFuer(trefferArt)
-      @statistik[trefferArt].treffer++
-      @statistik[trefferArt].wuerfe++
+    scores: (pointType) ->
+      return false unless @validatePointType pointType
+      @points += @pointsFor(pointType)
+      @stats[pointType].scored++
+      @stats[pointType].attempted++
     
-    verfehlt: (trefferArt) ->
-      return false unless @validateTrefferArt trefferArt
-      @statistik[trefferArt].wuerfe++
+    misses: (pointType) ->
+      return false unless @validatePointType pointType
+      @stats[pointType].attempted++
     
-    punkteFuer: (trefferArt) ->
-      TrefferArten[trefferArt]
+    pointsFor: (pointType) ->
+      PointTypes[pointType]
 
-#TODO move into TrefferArten
-    validateTrefferArt: (trefferArt) -> TrefferArten[trefferArt]?
+#TODO move into PointTypes
+    validatePointType: (pointType) -> PointTypes[pointType]?
 
-    treffer: (trefferArt) ->
-      return false unless @validateTrefferArt trefferArt
-      @statistik[trefferArt].treffer
+    scored: (pointType) ->
+      return false unless @validatePointType pointType
+      @stats[pointType].scored
     
-    wuerfe: (trefferArt) ->
-      return false unless @validateTrefferArt trefferArt
-      @statistik[trefferArt].wuerfe
+    attempted: (pointType) ->
+      return false unless @validatePointType pointType
+      @stats[pointType].attempted
 
 

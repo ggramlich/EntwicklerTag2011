@@ -1,5 +1,5 @@
 (function() {
-  var TrefferArten, root, _ref;
+  var PointTypes, root, _ref;
   var __hasProp = Object.prototype.hasOwnProperty;
   root = typeof exports !== "undefined" && exports !== null ? exports : this;
     if ((_ref = root.BbScout) != null) {
@@ -7,92 +7,92 @@
   } else {
     root.BbScout = {};
   };
-  TrefferArten = {
-    Freiwurf: 1,
-    Feldkorb: 2,
-    Dreier: 3
+  PointTypes = {
+    Freethrow: 1,
+    Fieldgoal: 2,
+    Threepointer: 3
   };
   root.BbScout.model = {
-    mannschaften: {},
-    Mannschaft: (function() {
+    teams: {},
+    Team: (function() {
       function _Class(name) {
         this.name = name;
-        this.spielerListe = {};
+        this.playersList = {};
       }
-      _Class.prototype.addSpieler = function(spieler) {
-        return this.spielerListe[spieler.trikot] = spieler;
+      _Class.prototype.addPlayer = function(player) {
+        return this.playersList[player.number] = player;
       };
-      _Class.prototype.getSpieler = function(trikot) {
-        return this.spielerListe[trikot];
+      _Class.prototype.getPlayer = function(number) {
+        return this.playersList[number];
       };
-      _Class.prototype.punkte = function() {
-        var spieler, summe, trikot, _ref2;
-        summe = 0;
-        _ref2 = this.spielerListe;
-        for (trikot in _ref2) {
-          if (!__hasProp.call(_ref2, trikot)) continue;
-          spieler = _ref2[trikot];
-          summe += spieler.punkte;
+      _Class.prototype.points = function() {
+        var number, player, sum, _ref2;
+        sum = 0;
+        _ref2 = this.playersList;
+        for (number in _ref2) {
+          if (!__hasProp.call(_ref2, number)) continue;
+          player = _ref2[number];
+          sum += player.points;
         }
-        return summe;
+        return sum;
       };
       return _Class;
     })(),
-    Spieler: (function() {
-      function _Class(trikot, vorname, nachname, punkte) {
-        this.trikot = trikot;
-        this.vorname = vorname != null ? vorname : '';
-        this.nachname = nachname != null ? nachname : '';
-        this.punkte = punkte != null ? punkte : 0;
-        this.statistik = {
-          Freiwurf: {
-            treffer: 0,
-            wuerfe: 0
+    Player: (function() {
+      function _Class(number, firstName, lastName, points) {
+        this.number = number;
+        this.firstName = firstName != null ? firstName : '';
+        this.lastName = lastName != null ? lastName : '';
+        this.points = points != null ? points : 0;
+        this.stats = {
+          Freethrow: {
+            scored: 0,
+            attempted: 0
           },
-          Feldkorb: {
-            treffer: 0,
-            wuerfe: 0
+          Fieldgoal: {
+            scored: 0,
+            attempted: 0
           },
-          Dreier: {
-            treffer: 0,
-            wuerfe: 0
+          Threepointer: {
+            scored: 0,
+            attempted: 0
           }
         };
       }
       _Class.prototype.name = function() {
-        return this.vorname + " " + this.nachname;
+        return this.firstName + " " + this.lastName;
       };
-      _Class.prototype.trifft = function(trefferArt) {
-        if (!this.validateTrefferArt(trefferArt)) {
+      _Class.prototype.scores = function(pointType) {
+        if (!this.validatePointType(pointType)) {
           return false;
         }
-        this.punkte += this.punkteFuer(trefferArt);
-        this.statistik[trefferArt].treffer++;
-        return this.statistik[trefferArt].wuerfe++;
+        this.points += this.pointsFor(pointType);
+        this.stats[pointType].scored++;
+        return this.stats[pointType].attempted++;
       };
-      _Class.prototype.verfehlt = function(trefferArt) {
-        if (!this.validateTrefferArt(trefferArt)) {
+      _Class.prototype.misses = function(pointType) {
+        if (!this.validatePointType(pointType)) {
           return false;
         }
-        return this.statistik[trefferArt].wuerfe++;
+        return this.stats[pointType].attempted++;
       };
-      _Class.prototype.punkteFuer = function(trefferArt) {
-        return TrefferArten[trefferArt];
+      _Class.prototype.pointsFor = function(pointType) {
+        return PointTypes[pointType];
       };
-      _Class.prototype.validateTrefferArt = function(trefferArt) {
-        return TrefferArten[trefferArt] != null;
+      _Class.prototype.validatePointType = function(pointType) {
+        return PointTypes[pointType] != null;
       };
-      _Class.prototype.treffer = function(trefferArt) {
-        if (!this.validateTrefferArt(trefferArt)) {
+      _Class.prototype.scored = function(pointType) {
+        if (!this.validatePointType(pointType)) {
           return false;
         }
-        return this.statistik[trefferArt].treffer;
+        return this.stats[pointType].scored;
       };
-      _Class.prototype.wuerfe = function(trefferArt) {
-        if (!this.validateTrefferArt(trefferArt)) {
+      _Class.prototype.attempted = function(pointType) {
+        if (!this.validatePointType(pointType)) {
           return false;
         }
-        return this.statistik[trefferArt].wuerfe;
+        return this.stats[pointType].attempted;
       };
       return _Class;
     })()
