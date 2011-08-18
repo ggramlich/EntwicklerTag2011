@@ -1,0 +1,42 @@
+Player in Team
+
+!|scenario|Player number _ of _ is _|number, teamname, playername|
+|start    |select player            |@teamname      |@number     |
+|check    |playerName               |@playername                 |
+
+----
+Players und Points
+
+!|scenario |Given a player with _ points|points|
+|start     |Player Simulation                  |
+|set points|@points                            |
+
+!|scenario|when he scores a _|pointType|
+|scores   |@pointType                  |
+
+!|scenario|then he has _ points|points |
+|check    |points              |@points|
+
+!|scenario|then he has _ point|points|
+|then he has @points points          |
+
+----
+Scored and missed shots
+!|scenario|then he has made _ out of _ _ _|scored, attempts, pointType1, pointType2|
+|check    |scored                         |@pointType1 @pointType2    |@scored     |
+|check    |attempted                      |@pointType1 @pointType2    |@attempts   |
+
+!|scenario|when he misses a _|pointType|
+|misses   |@pointType                  |
+
+----
+Game score
+
+!|scenario|The game _ vs _ begins|TeamA, TeamB |
+|start    |GameSimulation        |@TeamA|@TeamB|
+
+!|scenario|the score is _|score |
+|check    |score         |@score|
+
+!|scenario|player _ _ scores a _|team, number, pointType     |
+|player   |@number              |of|@team|scores a|@pointType|

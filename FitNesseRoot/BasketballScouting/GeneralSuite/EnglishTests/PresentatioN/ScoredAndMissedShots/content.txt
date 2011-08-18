@@ -1,0 +1,7 @@
+![ script
+Given a player with 0 points
+when he misses a free throw
+then he has made 0 out of 1 free throws
+when he scores a free throw
+then he has made 1 out of 2 free throws
+]!

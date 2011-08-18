@@ -1,0 +1,17 @@
+!include -c SampleTeams
+
+
+![ script
+The game A vs B begins
+the score is 0:0
+player B 21 scores a field goal
+the score is 0:2
+player A 99 scores a free throw
+the score is 1:2
+player A 98 scores a three pointer
+the score is 4:2
+player B 23 scores a free throw
+the score is 4:3
+player B 21 scores a three pointer
+the score is 4:6
+]!

@@ -1,0 +1,25 @@
+![ script
+Given a player with 0 points
+when he scores a free throw
+then he has 1 point
+]!
+
+![ script
+Given a player with 0 points
+when he scores a field goal
+then he has 2 points
+]!
+
+![ script
+Given a player with 0 points
+when he scores a three pointer
+then he has 3 points
+]!
+
+![ script
+Given a player with 0 points
+when he scores a three pointer
+when he scores a free throw
+when he scores a field goal
+then he has 6 points
+]!

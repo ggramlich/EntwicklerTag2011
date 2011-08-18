@@ -1,0 +1,12 @@
+!include -c <EnglishTests.SampleTeams
+
+![ script
+The game A vs B begins
+the score is 0:0
+player B 21 scores a free throw
+the score is 0:1
+player A 99 scores a field goal
+the score is 2:1
+]!
+
+[[Specification by Example][<BasketballScouting.PresentatioN.PresentatioN004]]

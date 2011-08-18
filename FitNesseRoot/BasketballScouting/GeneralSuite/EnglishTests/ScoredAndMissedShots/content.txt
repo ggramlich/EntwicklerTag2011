@@ -1,0 +1,64 @@
+Not only do we want to count points, but also the number of scored and missed shots.
+
+Free throws
+
+![ script
+Given a player with 0 points
+then he has made 0 out of 0 free throws
+when he scores a free throw
+then he has made 1 out of 1 free throws
+]!
+![ script
+Given a player with 0 points
+when he misses a free throw
+then he has made 0 out of 1 free throws
+when he scores a free throw
+then he has made 1 out of 2 free throws
+]!
+
+
+Field Goals
+
+![ script
+Given a player with 0 points
+then he has made 0 out of 0 field goals
+when he scores a field goal
+then he has made 1 out of 1 field goals
+]!
+![ script
+Given a player with 0 points
+when he misses a field goal
+then he has made 0 out of 1 field goals
+when he scores a field goal
+then he has made 1 out of 2 field goal
+]!
+
+Three pointers
+
+![ script
+Given a player with 0 points
+then he has made 0 out of 0 three pointers
+when he scores a three pointer
+then he has made 1 out of 1 three pointers
+]!
+![ script
+Given a player with 0 points
+when he misses a three pointer
+then he has made 0 out of 1 three pointers
+when he scores a three pointer
+then he has made 1 out of 2 three pointers
+]!
+
+
+Mixed
+
+![ script
+Given a player with 0 points
+when he misses a field goal
+when he scores a free throw
+when he scores a field goal
+when he scores a free throw
+then he has made 2 out of 2 free throw
+then he has made 1 out of 2 field goals
+then he has made 0 out of 0 three pointers
+]!

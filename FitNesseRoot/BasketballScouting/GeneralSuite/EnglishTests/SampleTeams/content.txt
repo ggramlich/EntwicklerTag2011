@@ -1,0 +1,19 @@
+|Team  |A                   |
+|number|first name|last name|
+|99    |Ninety    |Nine     |
+|98    |Ninety    |Eight    |
+|97    |Ninety    |Seven    |
+|96    |Ninety    |Six      |
+|95    |Ninety    |Five     |
+|94    |Ninety    |Four     |
+
+
+|Team  |B                   |
+|number|first name|last name|
+|21    |Twenty    |One      |
+|22    |Twenty    |Two      |
+|23    |Twenty    |Three    |
+|24    |Twenty    |Four     |
+|25    |Twenty    |Five     |
+|26    |Twenty    |Six      |
+|27    |Twenty    |Seven    |

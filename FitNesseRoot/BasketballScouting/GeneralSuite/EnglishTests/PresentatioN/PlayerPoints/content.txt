@@ -1,0 +1,9 @@
+![ script
+Given a player with 0 points
+when he scores a field goal
+then he has 2 points
+when he scores a free throw
+then he has 3 points
+]!
+
+[[The next examples][GameScore]]
