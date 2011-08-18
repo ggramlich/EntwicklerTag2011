@@ -70,7 +70,7 @@ class SpielSimulation
   
   getMannschaft: (mannschaft) -> model.teams[mannschaft]
 
-# Exportiere die fixtures als Modul Basketball
+# Exportiere die fixtures als Modul BasketballDeutsch
 
 this.BasketballDeutsch =
   Mannschaft: Mannschaft
