@@ -1,0 +1,67 @@
+${BEGIN_SLIDES}${BEGIN_SLIDE}
+
+!1 Finding a Common Language
+
+!2 Specification by Example
+
+!2 Franziska Bierer, Gregor Gramlich
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET001.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET002.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET006.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET006a.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET010.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET011.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+!-<p class="cartoon">
+<img src="/files/cartoons/ET011aEnglish.jpg" class="cartoon" />
+</p>-!
+
+${END_SLIDE}${BEGIN_SLIDE}
+
+|Team  |Dallas              |
+|number|last name|first name|
+|0     |Marion   |Shawn     |
+|41    |Nowitzki |Dirk      |
+
+![ script
+Player number 41 of Dallas is Dirk Nowitzki
+Player number 23 of Dallas is unknown
+Player number 41 of XYZ is unknown
+]!
+
+[[Test System][<BasketballScouting.CoffeScriptSuite.GeneralSuite.EnglishTests.PresentatioN.TeamRoster]]
+
+${END_SLIDE}
+${END_SLIDES}

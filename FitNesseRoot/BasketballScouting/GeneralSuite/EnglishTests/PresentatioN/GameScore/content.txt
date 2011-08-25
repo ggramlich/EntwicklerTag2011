@@ -9,4 +9,4 @@ player A 99 scores a field goal
 the score is 2:1
 ]!
 
-[[Specification by Example][<BasketballScouting.PresentatioN.PresentatioN004]]
+[[Specification by Example][<BasketballScouting.SoCraTesPresentation.PresentatioN002]]

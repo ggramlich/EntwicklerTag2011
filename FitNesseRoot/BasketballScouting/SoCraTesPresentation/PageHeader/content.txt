@@ -1,0 +1,4 @@
+!-<div id="topbar">
+<span class="andrenahide">Toggle presentation mode with F9, you always get out with ESC. (F11 is fullscreen mode for the browser.)</span>
+<img class="topbarimage" src="/files/jquery-presentation/images/andrena-head.png" />
+</div>-!
