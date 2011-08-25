@@ -1,2 +1,5 @@
 !|import          |
 |BasketballEnglish|
+
+|script|Team|
+|reset teams|

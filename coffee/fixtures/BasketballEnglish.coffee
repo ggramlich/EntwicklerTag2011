@@ -10,6 +10,8 @@ class Team
     @team = new model.Team(@name)
     model.teams[@name] = @team
 
+  resetTeams: -> model.teams = {}
+
   setNumber: (@number) ->
   setFirstName: (@firstName) ->
   setLastName: (@lastName) ->

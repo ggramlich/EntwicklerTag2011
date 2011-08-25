@@ -11,6 +11,9 @@
       this.team = new model.Team(this.name);
       model.teams[this.name] = this.team;
     }
+    Team.prototype.resetTeams = function() {
+      return model.teams = {};
+    };
     Team.prototype.setNumber = function(number) {
       this.number = number;
     };

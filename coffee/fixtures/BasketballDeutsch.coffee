@@ -10,6 +10,8 @@ class Mannschaft
     @mannschaft = new model.Team(@name)
     model.teams[@name] = @mannschaft
 
+  LöscheAlleMannschaften: () -> model.teams = {}
+
   setTrikot: (@trikot) ->
   setNachname: (@nachname) ->
   setVorname: (@vorname) ->

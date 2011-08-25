@@ -11,6 +11,9 @@
       this.mannschaft = new model.Team(this.name);
       model.teams[this.name] = this.mannschaft;
     }
+    Mannschaft.prototype.LöscheAlleMannschaften = function() {
+      return model.teams = {};
+    };
     Mannschaft.prototype.setTrikot = function(trikot) {
       this.trikot = trikot;
     };
