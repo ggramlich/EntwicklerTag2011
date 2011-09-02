@@ -21,13 +21,7 @@ ${END_SLIDE}${BEGIN_SLIDE}
 ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
-<img src="/files/cartoons/ET006.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET006a.jpg" class="cartoon" />
+<img src="/files/cartoons/ET006_crop.jpg" class="cartoon" />
 </p>-!
 
 ${END_SLIDE}${BEGIN_SLIDE}
@@ -50,15 +44,15 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
-|Team  |Dallas              |
+|Team  |Germany             |
 |number|last name|first name|
-|0     |Marion   |Shawn     |
-|41    |Nowitzki |Dirk      |
+|5     |Herber   |Johannes  |
+|14    |Nowitzki |Dirk      |
 
 ![ script
-Player number 41 of Dallas is Dirk Nowitzki
-Player number 23 of Dallas is unknown
-Player number 41 of XYZ is unknown
+Player number 14 of Germany is Dirk Nowitzki
+Player number 23 of Germany is unknown
+Player number 14 of XYZ is unknown
 ]!
 
 [[Test System][<BasketballScouting.CoffeScriptSuite.GeneralSuite.EnglishTests.PresentatioN.TeamRoster]]

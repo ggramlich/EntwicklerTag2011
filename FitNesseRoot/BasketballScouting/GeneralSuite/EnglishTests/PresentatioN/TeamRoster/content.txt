@@ -1,18 +1,17 @@
-Define a team roster for Dallas
+Define a team roster for Germany
 
-|Team  |Dallas              |
+|Team  |Germany             |
 |number|last name|first name|
-|0     |Marion   |Shawn     |
-|41    |Nowitzki |Dirk      |
-
+|5     |Herber   |Johannes  |
+|14    |Nowitzki |Dirk      |
 
 The players are now assigned to their shirt numbers and we can verify their names.
 If a shirt number or team is not defined, the player is name "unknown".
 
 ![ script
-Player number 41 of Dallas is Dirk Nowitzki
-Player number 23 of Dallas is unknown
-Player number 41 of XYZ is unknown
+Player number 14 of Germany is Dirk Nowitzki
+Player number 23 of Germany is unknown
+Player number 14 of XYZ is unknown
 ]!
 
 [[The next examples][PlayerPoints]]
