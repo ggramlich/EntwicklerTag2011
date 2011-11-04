@@ -4,7 +4,7 @@ ${BEGIN_SLIDES}${BEGIN_SLIDE}
 
 !2 Spezifikation mit Beispielen
 
-!2 Gregor Gramlich, Conrad Müller
+!2 Gregor Gramlich, Kurt Jäger
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
