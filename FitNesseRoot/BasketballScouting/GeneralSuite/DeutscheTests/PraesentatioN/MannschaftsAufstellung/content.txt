@@ -9,5 +9,4 @@ Spieler Nummer 23 von Dallas ist unbekannt
 Spieler Nummer 41 von XYZ ist unbekannt
 ]!
 
-#[[Zurück zur Geschichte][<BasketballScouting.PresentatioN.PresentatioN002]]
 [[Die nächsten Beispiele][SpielerPunkte]]
