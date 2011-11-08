@@ -21,13 +21,7 @@ ${END_SLIDE}${BEGIN_SLIDE}
 ${END_SLIDE}${BEGIN_SLIDE}
 
 !-<p class="cartoon">
-<img src="/files/cartoons/ET006.jpg" class="cartoon" />
-</p>-!
-
-${END_SLIDE}${BEGIN_SLIDE}
-
-!-<p class="cartoon">
-<img src="/files/cartoons/ET006a.jpg" class="cartoon" />
+<img src="/files/cartoons/ET006_crop.jpg" class="cartoon" />
 </p>-!
 
 ${END_SLIDE}${BEGIN_SLIDE}
@@ -50,29 +44,17 @@ ${END_SLIDE}${BEGIN_SLIDE}
 
 ${END_SLIDE}${BEGIN_SLIDE}
 
-|Mannschaft|XYZ             |
-|Trikot    |Nachname|Vorname|
-|0         |Marion  |Shawn  |
-|41        |Nowitzki|Dirk   |
+|Mannschaft|Deutschland      |
+|Trikot    |Nachname|Vorname |
+|5         |Herber  |Johannes|
+|14        |Nowitzki|Dirk    |
 
 ![ script
-Spieler Nummer 41 von XYZ ist Dirk Nowitzki
-Spieler Nummer 23 von XYZ ist unbekannt
-Spieler Nummer 11 von A ist unbekannt
+Spieler Nummer 14 von Deutschland ist Dirk Nowitzki
+Spieler Nummer 23 von Deutschland ist unbekannt
+Spieler Nummer 14 von XYZ ist unbekannt
 ]!
 
-${END_SLIDE}${BEGIN_SLIDE}
-
-|Mannschaft|XYZ             |
-|Trikot    |Nachname|Vorname|
-|0         |Marion  |Shawn  |
-|41        |Nowitzki|Dirk   |
-
-![ script
-Spieler Nummer 41 von XYZ ist Dirk Nowitzki
-Spieler Nummer 23 von XYZ ist unbekannt
-Spieler Nummer 11 von A ist unbekannt
-]!
 
 [[Testsystem][<BasketballScouting.CoffeScriptSuite.GeneralSuite.DeutscheTests.PraesentatioN.MannschaftsAufstellung]]
 

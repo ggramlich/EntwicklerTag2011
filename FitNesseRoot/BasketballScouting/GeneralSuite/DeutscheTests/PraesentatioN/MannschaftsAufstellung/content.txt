@@ -1,12 +1,12 @@
-|Mannschaft|Dallas          |
-|Trikot    |Nachname|Vorname|
-|0         |Marion  |Shawn  |
-|41        |Nowitzki|Dirk   |
+|Mannschaft|Deutschland      |
+|Trikot    |Nachname|Vorname |
+|5         |Herber  |Johannes|
+|14        |Nowitzki|Dirk    |
 
 ![ script
-Spieler Nummer 41 von Dallas ist Dirk Nowitzki
-Spieler Nummer 23 von Dallas ist unbekannt
-Spieler Nummer 41 von XYZ ist unbekannt
+Spieler Nummer 14 von Deutschland ist Dirk Nowitzki
+Spieler Nummer 23 von Deutschland ist unbekannt
+Spieler Nummer 14 von XYZ ist unbekannt
 ]!
 
 [[Die nächsten Beispiele][SpielerPunkte]]
